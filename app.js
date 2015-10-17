@@ -66,8 +66,8 @@ var users = require('./routes/users');
 var app = express(),
     http = require('http');
 
-var PORT_LISTENER = 3001;
-app.set('port', process.env.PORT || PORT_LISTENER);
+// var PORT_LISTENER = 3001;
+// app.set('port', process.env.PORT || PORT_LISTENER);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
