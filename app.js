@@ -6,7 +6,28 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var uriUtil = require('mongodb-uri');
- 
+var fs = require('fs');
+var routes = require('./routes/index');
+var users = require('./routes/users');
+
+var app = express(),
+    http = require('http');
+
+/*
+ * Paypal SDK config
+ */
+try {
+  var configJSON = fs.readFileSync(__dirname + "/config.json");
+  var config = JSON.parse(configJSON.toString());
+} catch (e) {
+  console.error("File config.json not found or is invalid: " + e.message);
+  process.exit(1);
+}
+/*routes.init(config);*/
+
+app.set('/', routes.index);
+
+
 /* 
  * Mongoose by default sets the auto_reconnect option to true.
  * We recommend setting socket options at both the server and replica set level.
@@ -60,11 +81,7 @@ db.once('open', function callback () {
     console.log('mongoDB up');
 });
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
 
-var app = express(),
-    http = require('http');
 
 // var PORT_LISTENER = 3001;
 // app.set('port', process.env.PORT || PORT_LISTENER);
@@ -72,6 +89,11 @@ var app = express(),
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+//Paypal
+app.set('/create', routes.create);
+app.set('/execute', routes.execute);
+app.set('/cancel', routes.cancel);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

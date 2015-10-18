@@ -1,0 +1,14 @@
+/*table {
+	border-collapse: collapse;
+
+}
+
+td {
+	font-weight: 10px;
+	color: green
+	border: 1px solid black;
+}*/
+
+table .col-md-4 {
+	text-align: center;
+}

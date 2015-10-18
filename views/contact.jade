@@ -12,6 +12,7 @@ html(lang='en')
     link(href='bootstrap-3.3.1/dist/css/bootstrap.min.css', rel='stylesheet')
     // Custom styles for this template
     link(href='bootstrap-3.3.1/docs/examples/signin/signin.css', rel='stylesheet')
+    link(href='/stylesheets/contact.css', rel='stylesheet')
     // Just for debugging purposes. Don't actually copy these 2 lines!
     //if lt IE 9
       script(src='bootstrap-3.3.1/docs/assets/js/ie8-responsive-file-warning.js')
@@ -36,25 +37,25 @@ html(lang='en')
               a.navbar-brand(href='/') Foster
             .navbar-collapse.collapse
               ul.nav.navbar-nav
-                li.active
+                li
                   a(href='/dLogin') Donor Portal
                 li
                   a(href='/nLogin') NGO Portal
-                li
+                li.active
                   a(href='/contact') Contact Us
 
     .container.marketing
     h1 Contact Information
       .row
         .col-lg-3
-          h2 Graham McAllister
-            p
-              | CTO
-            p
-        .col-lg-3
           h2 Dale Yarborough
             p
               | CEO
+            p
+        .col-lg-3
+          h2 Graham McAllister
+            p
+              | CTO
             p
         .col-lg-3
           h2 Tianzhang Shen

@@ -1,12 +1,23 @@
 var express = require('express');
 var router = express.Router();
+var paypal = require('paypal-rest-sdk');
+var config = {};
+
+/*
+ * SDK configuration
+ */
+
+exports.init = function(c){
+  config = c;
+  paypal.configure(c.api);
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('layout', { title: 'Express' });
 });
 
-router.get('/dlogin', function(req, res, next) {
+router.get('/dLogin', function(req, res, next) {
 	res.render('login/donateLogin');
 });
 
@@ -36,6 +47,14 @@ router.get('/execute', function(req, res, next) {
 
 router.get('/error', function(req, res, next) {
 	res.render('payment/error');
+});
+
+router.get('/dDash', function(req, res, next) {
+	res.render('donorDash');
+});
+
+router.get('/nDash', function(req, res, next) {
+  res.render('ngoDash');
 });
 
 

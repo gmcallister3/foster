@@ -5,3 +5,11 @@ img .img-rounded {
     max-width: 300px; 
     max-height: 300px;
 }
+
+.row.featurette {
+	position: absolute;
+    bottom: 50px;
+    right: 0%;
+    left: 0%;
+    display: block;
+}
