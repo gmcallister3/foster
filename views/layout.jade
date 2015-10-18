@@ -11,7 +11,7 @@ html(lang='en')
 
     // Bootstrap core CSS
     link(href='/bootstrap-3.3.1/dist/css/bootstrap.min.css', rel='stylesheet')
-    //link(href='/stylesheets/layout.css', rel='stylesheet')
+    link(href='/stylesheets/layout.css', rel='stylesheet')
     // Just for debugging purposes. Don't actually copy these 2 lines!
     //if lt IE 9
     script(src='/bootstrap-3.3.1/docs/assets/js/ie8-responsive-file-warning.js')
@@ -130,16 +130,18 @@ html(lang='en')
             a.btn.btn-default(id='donorButton') Learn More &raquo;
         // /.col-lg-3
       // /.row
-      //TODO - customize below
+    .container  
       hr.featurette-divider
       iframe(width="560" height="315" src="https://www.youtube.com/embed/kNDNmwWSi7A" frameborder="0" allowfullscreen)
+
       // /END THE FEATURETTES
       // FOOTER
+    .container  
       footer
         p.pull-right
           a(href='#') Back to top
         p
-          | &copy; 2015 Foster, Inc. &middot; 
+          | &copy; 2015 Foster, Inc. &middot;  
           a(href='#') Privacy
           |  &middot; 
           a(href='#') Terms

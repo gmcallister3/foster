@@ -42,23 +42,36 @@ html(lang='en')
                 li
                   a(href='/nLogin') NGO Portal
                 li.active
-                  a(href='/contact') Contact Us
+                  a(href='/contact') Contact Us    
 
-    .container.marketing
-    h1 Contact Information
+    // Main jumbotron for a primary marketing message or call to action
+    .jumbotron
+      .container
+        h1 Meet our team
+        p
+          | The three of us didn't know each other until we met on the Friday night of HackATL 2015.  We are passionate about our work and would love to see our efforts rewarded through philanthropy.
+        p
+    .container
+      // Example row of columns
       .row
-        .col-lg-3
+        .col-md-4
           h2 Dale Yarborough
-            p
-              | CEO
-            p
-        .col-lg-3
+          p
+            | Chief Executive Officer (Hipster)
+          p
+            a.btn.btn-default(href='#', role='button') Story &raquo;
+        .col-md-4
           h2 Graham McAllister
-            p
-              | CTO
-            p
-        .col-lg-3
-          h2 Tianzhang Shen
-            p
-              | CMO
-            p
+          p
+            | Chief Technology Officer (Hacker)
+          p
+            a.btn.btn-default(href='#', role='button') Story &raquo;
+        .col-md-4
+          h2 Titian Shen
+          p
+            | Chief Marketing Officer (Hustler)
+          p
+            a.btn.btn-default(href='#', role='button') Story &raquo;
+      hr
+      footer
+        p &copy; Foster 2015

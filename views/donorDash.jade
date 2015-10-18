@@ -12,7 +12,6 @@ html(lang='en')
     // Bootstrap core CSS
     link(href='/bootstrap-3.3.1/dist/css/bootstrap.min.css', rel='stylesheet')
     link(href='/stylesheets/donorDash.css', rel='stylesheet')
-    //link(href='/stylesheets/layout.css', rel='stylesheet')
     // Just for debugging purposes. Don't actually copy these 2 lines!
     //if lt IE 9
     script(src='/bootstrap-3.3.1/docs/assets/js/ie8-responsive-file-warning.js')
@@ -48,39 +47,60 @@ html(lang='en')
                   a(href='/contact') Contact Us  
                 li.pull-right
                   a(href='#') Donor Dashboard
-      .jumbotron
-        h1 This portal allows you to track your impact qualitatively
-        p.lead
-          | The table below lists all items that were purchased with your generous donation.
-      table
-        tr
-          .col-md-4
-            td Date
-          .col-md-4  
-            td Status
-          .col-md-4  
-            td Result
-        tr
-          .col-md-4
-            td Date
-          .col-md-4  
-            td Status
-          .col-md-4  
-            td Result
-        tr
-          .col-md-4
-            td Date
-          .col-md-4  
-            td Status
-          .col-md-4  
-            td Result
-        tr
-          .col-md-4
-            td Date
-          .col-md-4  
-            td Status
-          .col-md-4  
-            td Result
+    .jumbotron
+      h2 This portal allows you to track your impact qualitatively
+      p.lead
+        | The table below lists all items that were purchased with your generous donation.
+    table
+      tr
+        .col-md-4
+          th Date
+        .col-md-4  
+          th Status
+        .col-md-4  
+          th Result
+      tr
+        .col-md-4
+          td 10/09/15
+        .col-md-4  
+          td Pending
+        .col-md-4  
+          td N/A
+      tr
+        .col-md-4
+          td 9/30/15
+        .col-md-4  
+          td Complete
+        .col-md-4  
+          td ($45.00) -- 48.97% weekly shelter
+      tr
+        .col-md-4
+          td 10/3/15
+        .col-md-4  
+          td Complete
+        .col-md-4  
+          td ($108.00) -- 100% water + 100% 6oz gatorade
+      tr
+        .col-md-4
+          td 10/10/15
+        .col-md-4  
+          td Complete
+        .col-md-4  
+          td ($5.00) -- 100% dozen eggs + 76% gallon milk
+      tr
+        .col-md-4
+          td ...
+        .col-md-4  
+          td ...
+        .col-md-4  
+          td ...
+      tr
+        .col-md-4
+          td ...
+        .col-md-4  
+          td ...
+        .col-md-4  
+          td ...
   
     // Bootstrap core JavaScript
     // ==================================================

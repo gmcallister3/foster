@@ -11,7 +11,7 @@ html(lang='en')
 
     // Bootstrap core CSS
     link(href='/bootstrap-3.3.1/dist/css/bootstrap.min.css', rel='stylesheet')
-    //link(href='/stylesheets/layout.css', rel='stylesheet')
+    link(href='/stylesheets/donorDash.css', rel='stylesheet')
     // Just for debugging purposes. Don't actually copy these 2 lines!
     //if lt IE 9
     script(src='/bootstrap-3.3.1/docs/assets/js/ie8-responsive-file-warning.js')
@@ -44,73 +44,66 @@ html(lang='en')
                 li
                   a(href='/nLogin') NGO Portal
                 li
-                  a(href='/contact') Contact Us
+                  a(href='/contact') Contact Us  
                 li.pull-right
-                	a(href='#') NGO Dashboard
-        .jumbotron
-          h1 This portal allows you to track your impact qualitatively
-          p.lead
-            | The table below lists all items that were purchased with your generous donation.
-        .row.marketing
-          .col-lg-4
-            h4 
-            p
-              | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-            h4 Subheading
-            p
-              | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-            h4 Subheading
-            p Maecenas sed diam eget risus varius blandit sit amet non magna.
-          .col-lg-4
-            h4 Subheading
-            p
-              | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-            h4 Subheading
-            p
-                | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-            h4 Subheading
-            p Maecenas sed diam eget risus varius blandit sit amet non magna.          
-       //-  .row.text-center
-       //-  	.col-md-6
-       //-  		.donations
-       //-  			p Donations
-       //-  	.col-md-6
-       //-  		.products	
-       //-  			p Products
-       //-  .row.text-center
-       //-  	.col-md-6
-       //-  		.donations
-       //-  			p
-    			//- .col-md-3
-       //-  		.items
-       //-  			p Items
-       //-  	.col-md-3		
-      	//- 		.status
-      	//- 			p Status
-      	//- .row.text-center
-      	//- 	.col-md-6
-       //-  		.donations
-       //-  			p $45.00
-    			//- .col-md-3
-       //-  		.items
-       //-  			p 
-       //-  	.col-md-3		
-      	//- 		.status
-      	//- 			p Status
-	      //-     .jumbotron
-	      //-         h1 This portal allows you to track your purchases
-	      //-         p.lead
-	      //-           | The table below lists requested items and granted items along with prices.
-        .footer
-          p &copy; Foster 2015    
-
-    // Data Table
-  	// ==================================================          
-
-
-
+                  a(href='#') Donor Dashboard
+    .jumbotron
+      h2 This portal allows you to track your impact qualitatively
+      p.lead
+        | The table below lists all items that were purchased with your generous donation.
+    table
+      tr
+        .col-md-6
+          th Donations
+        .col-md-6  
+          th Products
+      tr
+        .col-md-6
+          td -
+        .col-md-6 
+          .col-md-3
+            td Item
+          .col-md-3
+            td Status
+      tr
+        .col-md-4
+          td $45.00
+        .col-md-4  
+          td Weekly Shelter
+        .col-md-4  
+          td Partial
+      tr
+        .col-md-4
+          td $108.00
+        .col-md-4  
+          td Drinks (gatorade, water)
+        .col-md-4  
+          td Complete
+      tr
+        .col-md-4
+          td $5.00
+        .col-md-4  
+          td Eggs + Milk
+        .col-md-4  
+          td Partial
+      tr
+        .col-md-4
+          td ...
+        .col-md-4  
+          td ...
+        .col-md-4  
+          td ...
+      tr
+        .col-md-4
+          td ...
+        .col-md-4  
+          td ...
+        .col-md-4  
+          td ...
+  
     // Bootstrap core JavaScript
     // ==================================================
     // Placed at the end of the document so the pages load faster
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(src='/bootstrap-3.3.1/dist/js/bootstrap.min.js')
+    script(src='/bootstrap-3.3.1/docs/assets/js/_vendor/holder.js')
