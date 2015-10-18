@@ -8,18 +8,20 @@ html(lang='en')
     meta(name='author', content='')
     link(rel='icon', href='/bootstrap-3.3.1/docs/favicon.ico')
     title Foster
+
     // Bootstrap core CSS
     link(href='/bootstrap-3.3.1/dist/css/bootstrap.min.css', rel='stylesheet')
+    //link(href='/stylesheets/layout.css', rel='stylesheet')
     // Just for debugging purposes. Don't actually copy these 2 lines!
     //if lt IE 9
-      script(src='/bootstrap-3.3.1/docs/assets/js/ie8-responsive-file-warning.js')
+    script(src='/bootstrap-3.3.1/docs/assets/js/ie8-responsive-file-warning.js')
     script(src='/bootstrap-3.3.1/docs/assets/js/ie-emulation-modes-warning.js')
     // IE10 viewport hack for Surface/desktop Windows 8 bug
     script(src='/bootstrap-3.3.1/docs/assets/js/ie10-viewport-bug-workaround.js')
     // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     //if lt IE 9
-      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
-      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
 
 
     // Custom styles for this template
@@ -37,15 +39,15 @@ html(lang='en')
                 span.icon-bar
                 span.icon-bar
                 span.icon-bar
-              a.navbar-brand(href='#') Foster
+              a.navbar-brand(href='/') Foster
             .navbar-collapse.collapse
               ul.nav.navbar-nav
                 li.active
-                  a(href='#') Home
+                  a(href='/dLogin') Donor Portal
                 li
-                  a(href='#about') About
+                  a(href='/nLogin') NGO Portal
                 li
-                  a(href='#contact') Contact
+                  a(href='/contact') Contact Us
     // Carousel
     // ==================================================
     #myCarousel.carousel.slide(data-ride='carousel')
@@ -56,34 +58,33 @@ html(lang='en')
         li(data-target='#myCarousel', data-slide-to='2')
       .carousel-inner
         .item.active
-          img(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='First slide')
+          //TODO - Insert real images
+          img(src='images/giving.png', alt='First slide')
           .container
             .carousel-caption
-              h1 Example headline.
+              h1 Foster
               p
-                | Note: If you&apos;re viewing this page via a 
-                code file://
-                |  URL, the &quot;next&quot; and &quot;previous&quot; Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.
-              p
-                a.btn.btn-lg.btn-primary(href='#', role='button') Sign up today
+                //TODO - Button goes to some paypal portal
+                a.btn.btn-lg.btn-primary(href='/donate', role='button') Donate
+              p  
         .item
           img(src='data:image/gif;base64,R0lGODlhAQABAIAAAGZmZgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Second slide')
           .container
             .carousel-caption
-              h1 Another example headline.
+              h1 Foster
               p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                //TODO - Button goes to some paypal portal
+                a.btn.btn-lg.btn-primary(href='/donate', role='button') Donate
               p
-                a.btn.btn-lg.btn-primary(href='#', role='button') Learn more
         .item
-          img(src='data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Third slide')
+          img.img-rounded(src='data:image/gif;base64,R0lGODlhAQABAIAAAFVVVQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Third slide')
           .container
             .carousel-caption
-              h1 One more for good measure.
+              h1 Foster
               p
-                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                //TODO - Button goes to some paypal portal
+                a.btn.btn-lg.btn-primary(href='/donate', role='button') Donate
               p
-                a.btn.btn-lg.btn-primary(href='#', role='button') Browse gallery
       a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
         span.glyphicon.glyphicon-chevron-left
       a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
@@ -96,32 +97,41 @@ html(lang='en')
     .container.marketing
       // Three columns of text below the carousel
       .row
-        .col-lg-4
+        .col-lg-3
+          //TODO - insert images of 4 parties involved
           img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', style='width: 140px; height: 140px;')
-          h2 Heading
+          h2 Donor
           p
-            | Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+            | Donors are the lifeblood of our company.  Without their support, we could not exist.
           p
-            a.btn.btn-default(href='#', role='button') View details &raquo;
-        // /.col-lg-4
-        .col-lg-4
+            a.btn.btn-default(id='donorButton') Learn More &raquo;
+        // /.col-lg-3
+        .col-lg-3
           img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', style='width: 140px; height: 140px;')
-          h2 Heading
+          h2 Foster
           p
-            | Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+            | We help connect the donor with an important cause and return qualitative information about their impact.
           p
-            a.btn.btn-default(href='#', role='button') View details &raquo;
-        // /.col-lg-4
-        .col-lg-4
+            a.btn.btn-default(id='fosterButton') Learn More &raquo;
+        // /.col-lg-3
+        .col-lg-3
           img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', style='width: 140px; height: 140px;')
-          h2 Heading
+          h2 NGO
           p
-            | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            | The NGO receives credit towards Amazon products and buy through our platform which is connected to the marketplace.  We track all purchases.
           p
-            a.btn.btn-default(href='#', role='button') View details &raquo;
-        // /.col-lg-4
+            a.btn.btn-default(id='donorButton') Learn More &raquo;
+        // /.col-lg-3
+        .col-lg-3
+          img.img-circle(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', alt='Generic placeholder image', style='width: 140px; height: 140px;')
+          h2 Amazon
+          p
+            | We partner with amazon due to their product availability and delivery power.
+          p
+            a.btn.btn-default(id='donorButton') Learn More &raquo;
+        // /.col-lg-3
       // /.row
-      // START THE FEATURETTES
+      //TODO - customize below
       hr.featurette-divider
       .row.featurette
         .col-md-7
@@ -159,7 +169,7 @@ html(lang='en')
         p.pull-right
           a(href='#') Back to top
         p
-          | &copy; 2014 Company, Inc. &middot; 
+          | &copy; 2015 Foster, Inc. &middot; 
           a(href='#') Privacy
           |  &middot; 
           a(href='#') Terms

@@ -1,0 +1,66 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='/bootstrap-3.3.1/docs/favicon.ico')
+    title Foster
+    // Bootstrap core CSS
+    link(href='/bootstrap-3.3.1/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/stylesheets/paypal.css', rel='stylesheet')
+    // Just for debugging purposes. Don't actually copy these 2 lines!
+    //if lt IE 9
+      script(src='/bootstrap-3.3.1/docs/assets/js/ie8-responsive-file-warning.js')
+    script(src='/bootstrap-3.3.1/docs/assets/js/ie-emulation-modes-warning.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='/bootstrap-3.3.1/docs/assets/js/ie10-viewport-bug-workaround.js')
+    // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+
+
+    // Custom styles for this template
+    link(href='/bootstrap-3.3.1/docs/examples/carousel/carousel.css', rel='stylesheet')
+  // NAVBAR
+  // ==================================================
+  body
+    .navbar-wrapper
+      .container
+        .navbar.navbar-inverse.navbar-static-top(role='navigation')
+          .container
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand(href='/') Foster
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li.active
+                  a(href='/dLogin') Donor Portal
+                li
+                  a(href='/nLogin') NGO Portal
+                li
+                  a(href='/contact') Contact Us
+    .row
+      h1 PayPal REST API
+    // Division
+    // ==================================================
+    div#paypal
+      p Create a new PayPal Payment
+      form(action="/create")
+        input(type='hidden', name='method', value='paypal')
+        label(for='amount') Amount
+        input(type='text', id='amount', name='amount', required)
+        label(for='currency') Currency
+        input(type='text', id='currency', maxlength='3',
+              name='currency', placeholder='USD', required)
+        label(for='description') Description
+        input(type='text', id='description', name='description',
+              placeholder='Optional')
+        button(type='submit' href='/create') Create Payment

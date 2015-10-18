@@ -1,4 +1,7 @@
-body {
-	/*color: #586A6A*/
-	background-color: #586A6A;
+/* resize images */
+img .img-rounded {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
 }
